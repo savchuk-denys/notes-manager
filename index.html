@@ -7,48 +7,111 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    
     <header>
         <img src="assets/img/logo.jpg" alt="Логотип Менеджер нотаток">
         <h1>Менеджер нотаток</h1>
     </header>
 
-    <main>
-        <section id="new-note">
-            <h2>Нова нотатка</h2>
-            <form action="#" method="post" id="noteForm">
-                <div>
-                    <label for="noteTitle">Заголовок:</label>
-                    <input type="text" id="noteTitle" name="noteTitle" required>
-                </div>
-                <div>
-                    <label for="noteContent">Зміст:</label>
-                    <textarea id="noteContent" name="noteContent" required></textarea>
-                </div>
+    <nav class="tabs">
+        <a href="#notes" class="tab active" data-page="notes">Нотатки</a>
+        <a href="#passwords" class="tab" data-page="passwords">Паролі</a>
+    </nav>
+    <div id="page-notes" class="page active">
+        <div class="container">
+            <main>
+                <section id="new-note">
+                    <h2>Нова нотатка</h2>
+                    <form action="#" method="post" id="noteForm">
+                        <div>
+                            <label for="noteTitle">Заголовок:</label>
+                            <input type="text" id="noteTitle" name="noteTitle" required>
+                        </div>
+                        <div>
+                            <label for="noteContent">Зміст:</label>
+                            <textarea id="noteContent" name="noteContent" required></textarea>
+                        </div>
 
-                <button type="submit">Додати нотатку</button>
-            </form>
-        </section>
+                        <button type="submit">Додати нотатку</button>
+                    </form>
+                </section>
 
-        <section id="note-list">
-            <h2>Список нотаток</h2>
-            <article class="note-card">
-                <h3>Заголовок нотатки</h3>
-                <p>Уривок нотатки...</p>
-            </article>
-        </section>
-        
-        
-    </main>
+                <section id="note-list">
+                    <h2>Список нотаток</h2>
+                    <div class="cards">
+                        <article class="note-card category-work">
+                            <h3>Заголовок нотатки</h3>
+                            <p>Уривок нотатки...</p>
+                        </article>
+                        <article class="note-card category-personal">
+                            <h3>Ще одна нотатка</h3>
+                            <p>Уривок іншої нотатки...</p>
+                        </article>
+                        <article class="note-card category-idea">
+                            <h3>Третя нотатка</h3>
+                            <p>Уривок третьої нотатки...</p>
+                        </article>
+                    </div>
+                </section>
+            </main>
+            
+            <aside id="note-view">
+                <h2>Перегляд нотатки</h2>
+                <article class="note-view">
+                    <h3>Заголовок нотатки</h3>
+                    <p>Повний зміст нотатки...</p>
+                    <p>Зроблено: 2026-10-10</p>
+                </article>
+            </aside>
+        </div>
+    </div>
+    
+    <div id="page-passwords" class="page">
+        <div class="container">
+            <main>
+                <section id="new-password">
+                    <h2>Паролі</h2>
+                    <form action="#" method="post" id="passwordForm">
+                        <div>
+                            <label for="passwordName">Назва:</label>
+                            <input type="text" id="passwordName" name="passwordName" required>
+                        </div>
+                        <div>
+                            <label for="passwordValue">Пароль:</label>
+                            <input type="password" id="passwordValue" name="passwordValue" required>
+                        </div>
+                        <button type="submit">Додати пароль</button>
+                    </form>
+                </section>
+                <section id="password-list">
+                    <h2>Список паролів</h2>
+                    <div class="cards">
+                        <article class="password-card">
+                            <h3>Заголовок пароля</h3>
+                            <p>Уривок пароля...</p>
+                        </article>
+                        <article class="password-card">
+                            <h3>Ще один пароль</h3>
+                            <p>Уривок іншого пароля...</p>
+                        </article>
+                        <article class="password-card">
+                            <h3>Третій пароль</h3>
+                            <p>Уривок третього пароля...</p>
+                        </article>
+                    </div>
+                </section>
+            </main>
 
-    <aside id="note-view">
-        <h2>Перегляд нотатки</h2>
-        <article class="note-view">
-            <h3>Заголовок нотатки</h3>
-            <p>Повний зміст нотатки...</p>
-            <p>Зроблено: 2026-10-10</p>
-        </article>
-    </aside>
-
+            <aside id="password-view">
+                <h2>Перегляд пароля</h2>
+                <article class="password-view">
+                    <h3>Заголовок пароля</h3>
+                    <p>Повний зміст пароля...</p>
+                    <p>Зроблено: 2026-10-10</p>
+                </article>
+            </aside>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2026 Менеджер нотаток. Всі права захищені.</p>
     </footer>
